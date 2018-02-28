@@ -10,7 +10,6 @@ with open(os.path.join(here, 'CHANGES.txt')) as f:
 
 requires = [
     'pyramid',
-    'pyramid_{{ cookiecutter.template_language }}',
     'pyramid_debugtoolbar',
     'pyramid_json_hyperschema',
     'waitress',

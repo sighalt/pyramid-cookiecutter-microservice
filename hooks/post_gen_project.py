@@ -6,29 +6,7 @@ WIN = sys.platform.startswith('win')
 
 
 def main():
-    clean_unused_template_settings()
     display_actions_message()
-
-
-def clean_unused_template_settings():
-    selected_lang = '{{ cookiecutter.template_language }}'
-    working = os.path.abspath(os.path.join(os.path.curdir))
-    templates = os.path.join(working, '{{cookiecutter.repo_name}}', 'templates')
-
-    if selected_lang == "chameleon":
-        extension = ".pt"
-    else:
-        extension = "." + selected_lang
-    delete_other_ext(templates, extension)
-
-
-def delete_other_ext(directory, extension):
-    """
-    Removes all files not ending with the extension.
-    """
-    for i in os.listdir(directory):
-        if not i.endswith(extension):
-            os.unlink(os.path.join(directory, i))
 
 
 def display_actions_message():
