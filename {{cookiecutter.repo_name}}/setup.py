@@ -3,10 +3,8 @@ import os
 from setuptools import setup, find_packages
 
 here = os.path.abspath(os.path.dirname(__file__))
-with open(os.path.join(here, 'README.txt')) as f:
+with open(os.path.join(here, 'README.rst')) as f:
     README = f.read()
-with open(os.path.join(here, 'CHANGES.txt')) as f:
-    CHANGES = f.read()
 
 requires = [
     'pyramid',
@@ -25,7 +23,7 @@ setup(
     name='{{ cookiecutter.repo_name }}',
     version='0.0',
     description='{{ cookiecutter.project_name }}',
-    long_description=README + '\n\n' + CHANGES,
+    long_description=README,
     classifiers=[
         'Programming Language :: Python',
         'Framework :: Pyramid',
