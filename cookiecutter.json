@@ -1,0 +1,7 @@
+{
+    "project_name": "Pyramid Scaffold",
+    "repo_name": "{{cookiecutter.project_name.lower().strip().replace(' ', '_').replace(':', '_').replace('-', '_').replace('!', '_')}}",
+    "_copy_without_render": [
+        "static/*"
+    ]
+}
