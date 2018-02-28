@@ -1,4 +1,6 @@
+from datetime import datetime
 from pyramid.config import Configurator
+from pyramid.interfaces import IRendererFactory
 
 
 def main(global_config, **settings):
